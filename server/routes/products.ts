@@ -61,8 +61,8 @@ router.post('/', requireAdmin, async (req: AuthenticatedRequest, res: Response) 
     const category = typeof body.category === 'string' ? body.category.trim() : '';
     const price = Number(body.price);
     const description = typeof body.description === 'string' ? body.description.trim() : '';
-    const materials = typeof body.materials === 'string' ? body.materials.trim() : 'Handcrafted Studio Material';
-    const dimensions = typeof body.dimensions === 'string' ? body.dimensions.trim() : 'Standard Studio Size';
+    const materials = typeof body.materials === 'string' ? body.materials.trim() : 'Standard Quality ';
+    const dimensions = typeof body.dimensions === 'string' ? body.dimensions.trim() : 'Standard Pack';
     const image = typeof body.image === 'string' ? body.image.trim() : '/src/assets/images/dress_festive_kurti_1795424696363.jpg';
     const accentHex = typeof body.accentHex === 'string' && /^#[0-9a-fA-F]{6}$/.test(body.accentHex.trim())
       ? body.accentHex.trim()

@@ -189,12 +189,12 @@ router.post('/admin-login', async (req, res: Response) => {
       const token = signSessionToken({
         sub: 'adm_env',
         email: 'admin@navakart.local',
-        name: 'Studio Admin',
+        name: 'Seller Admin',
         role: 'admin',
       });
       res.json({
         token,
-        user: { id: 'adm_env', name: 'Studio Admin', email: 'admin@palomagoods.local', role: 'admin' },
+        user: { id: 'adm_env', name: 'Seller Admin', email: 'admin@navakart.local', role: 'admin' },
       });
       return;
     }
@@ -206,7 +206,7 @@ router.post('/admin-login', async (req, res: Response) => {
     }
 
     if (!verifyPassword(passcode, adminUser.passwordHash)) {
-      res.status(401).json({ error: 'Incorrect studio passcode' });
+      res.status(401).json({ error: 'Incorrect seller passcode' });
       return;
     }
 

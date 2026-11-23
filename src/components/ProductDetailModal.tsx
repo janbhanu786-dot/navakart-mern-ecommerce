@@ -329,7 +329,7 @@ export function ProductDetailModal({
                     rows={2}
                     value={reviewComment}
                     onChange={(e) => setReviewComment(e.target.value)}
-                    placeholder="Share how this object looks and performs in your space..."
+                    placeholder="Share quality, fit, freshness, or delivery feedback..."
                     className="w-full px-3 py-2 text-xs border border-zinc-300 rounded-lg focus:outline-none focus:border-blue-600"
                   />
                   {reviewError && <p className="text-xs text-rose-600">{reviewError}</p>}
